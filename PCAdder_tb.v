@@ -17,11 +17,11 @@ module PCAdder_tb();
         .PCResult(PCResult), 
         .PCAddResult(PCAddResult)
     );
-
+    // Try bit 0, 4, 8, 16, 32
 	initial begin
 	
     /* Please fill in the implementation here... */
-	
+	PCResult = 5'b00100;
 	end
 
 endmodule
