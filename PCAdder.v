@@ -27,7 +27,8 @@ module PCAdder(PCResult, PCAddResult);
 
     /* Please fill in the implementation here... */
     
-    assign PCAddResult = PCResult + 32'b00000100;
+    assign PCAddResult = PCResult + 6'b000100;
+    
 endmodule
 
  
