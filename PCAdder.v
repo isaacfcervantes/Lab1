@@ -18,17 +18,20 @@
 // PC + 4. The result should always be an increment of the signal 'PCResult' by 
 // 4 (i.e., PCAddResult = PCResult + 4).
 ////////////////////////////////////////////////////////////////////////////////
+// Xtanley Jin D. Quiambao,
 
+//Note: When doing the simulation, change the radix in the settings to Decimals
+// and everything should look correct. The input is a 5 bit register that outputs it + 4.
 module PCAdder(PCResult, PCAddResult);
 
     input [31:0] PCResult;
-
-    output [31:0] PCAddResult;
-
+    output reg [31:0] PCAddResult;
+    reg [31:0] constantVal;
     /* Please fill in the implementation here... */
-    
-    assign PCAddResult = PCResult + 6'b000100;
-    
+    always @ (PCResult,constantVal) begin
+        constantVal <= 5'b00100;
+        PCAddResult <= PCResult + constantVal;
+    end
 endmodule
 
  
